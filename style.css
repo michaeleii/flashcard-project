@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Varela+Round&display=swap');
+
+body {
+    background-color: #2a9d8f;
+    background-image: url("image/world.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.quiz-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    color: white;
+    margin-top: 10px;
+    font-family: 'Cabin', sans-serif;
+}
+.flashcard-container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 660px;
+}
+.card {
+    text-align: center;
+    border-radius: 25px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 25px;
+    box-shadow: 0 1px 8px rgb(0 0 0 / 20%), 0 3px 4px rgb(0 0 0 / 14%), 0 3px 3px -2px rgb(0 0 0 / 12%);
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    transition: all 1.25s;
+    transform-style: preserve-3d;
+    z-index: 0;
+}
+.card:hover {
+    transform: rotateY(180deg);
+}
+.front, .back {
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+}
+.front {
+    color: white;
+    background: #204051;
+    z-index: 1;
+}
+.back {
+    transform: rotateY(180deg);
+    color: #e76f51;
+    background-color: #e9c46a;
+    z-index: 2;
+
+}
+
+
